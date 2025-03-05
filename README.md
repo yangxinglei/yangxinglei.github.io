@@ -7,5 +7,6 @@
 - 📫 联系方式：[sparky2021@163.com]
 🚀 访问我的网店：[点击这里](https://shop437387901.taobao.com/?spm=a21n57.shop_search.0.0.8e38523c7R0Ade)
 或直接访问 👉(https://shop437387901.taobao.com/?spm=a21n57.shop_search.0.0.8e38523c7R0Ade)
+![GitHub Profile Card](https://your-profile-card-service.com/api?username=your-username)[Github]（https://github.com/yangxinglei）
 ---
 ![GitHub 统计](https://github-readme-stats.vercel.app/api?username=yangxinglei&show_icons=true&theme=radical)
