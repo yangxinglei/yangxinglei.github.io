@@ -1,6 +1,5 @@
 
-# 你好，我是 [杨兴磊] 👋
-#Hi,there,I'm Jonathan
+# Hi,there,I'm YangXinglei 👋
 
 
 - 🌱 我喜欢的编程语言：Python C# Dart C++ C
