@@ -3,6 +3,8 @@
   <a href="#博客"><img src="https://img.shields.io/badge/-博客-green"></a>
   <a href="#捐赠"><img src="https://img.shields.io/badge/-捐赠-orange"></a>
 </p>
+---
+## 主页
 # Hi,there,I'm YangXinglei 👋
 
 
@@ -15,3 +17,10 @@
 
 ---
 ![GitHub 统计](https://github-readme-stats.vercel.app/api?username=yangxinglei&show_icons=true&theme=radical)
+
+
+## 博客
+这里是博客的内容...
+
+## 捐赠
+这里是捐赠的内容...
