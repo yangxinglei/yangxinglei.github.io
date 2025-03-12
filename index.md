@@ -13,4 +13,4 @@ title: 主页
 # Hi,there,I'm YangXinglei 👋
 - 🌱 My favorite programming languages: Python, C#, Dart, C++, C
 - 🚀 Personal project: [LANtransmission](https://github.com/你的仓库)
-- 📫 Contact: [mailto:sparky2021@163.com]
+- 📫 Contact: [sparky2021@163.com]
