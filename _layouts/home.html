@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    {% include head.html %}
+
+<body class="bg-gray-100 dark:bg-gray-900">
+    <div class="flex flex-col h-screen">
+        <!-- 顶部区域 -->
+        <div class="flex-1 flex" style="height: 75vh;">
+            <!-- 左侧区域：个人信息 -->
+            <div class="w-1/4 bg-gray-800 text-white p-8 dark:bg-gray-700">
+                 <!-- 个人图像 -->
+                 <div class="flex justify-center">
+                    <img src="{{ '/assets/images/profile.png' | relative_url }}" alt="个人图像" class="w-32 h-32 rounded-full">
+                </div>
+                <h2 class="text-2xl font-bold mb-4">个人信息</h2>
+                <p class="mb-2">姓名：杨兴磊</p>
+                <p class="mb-2">职业：电子工程师</p>
+                
+            <!-- 邮件地址 -->
+            <p class="mb-2">
+                <i class="fas fa-envelope"></i> 邮箱：
+                <a href="mailto:sparky2021@163.com" class="text-blue-400 hover:text-blue-300">sparky2021@163.com</a>
+            </p>
+
+            <!-- 社交平台链接 -->
+            <div class="mt-6">
+                <h3 class="text-xl font-bold mb-2">社交平台</h3>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="https://github.com/yangxinglei" target="_blank" class="flex items-center text-blue-400 hover:text-blue-300">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.douyin.com/user/MS4wLjABAAAAxXRWWJvEw30LMJTwLmPEIDTeys3cKyjiNUgMQ9Fz8cA" target="_blank" class="flex items-center text-blue-400 hover:text-blue-300">
+                            <i class="fab fa-tiktok mr-2"></i> 抖音
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.xiaohongshu.com/user/profile/675cf2f9000000001801f258" target="_blank" class="flex items-center text-blue-400 hover:text-blue-300">
+                            <i class="fab fa-book mr-2"></i> 小红书
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            <!-- 右侧区域 -->
+            <div class="w-3/4 bg-white dark:bg-gray-800">
+                <!-- 导航栏 -->
+                <nav class="bg-gray-900 p-4 flex justify-between items-center dark:bg-gray-900">
+                    <div class="flex space-x-8">
+                        <a href="/" class="text-white hover:text-yellow-400">
+                            <i class="fas fa-home"></i> 主页
+                        </a>
+                        <a href="/blog" class="text-white hover:text-yellow-400">
+                            <i class="fas fa-blog"></i> 博客
+                        </a>
+                        <a href="/collaborate" class="text-white hover:text-yellow-400">
+                            <i class="fas fa-handshake"></i> 合作
+                        </a>
+                        <a href="/donate" class="text-white hover:text-yellow-400">
+                            <i class="fas fa-donate"></i> 捐赠
+                        </a>
+                    </div>
+                    <!-- 切换按钮（右上角） -->
+                    <button id="theme-toggle" class="text-white hover:text-yellow-400">
+                        <i class="fas fa-moon"></i> 暗黑模式
+                    </button>
+                </nav>
+
+                <!-- 右侧内容 -->
+                <div class="p-8 text-gray-900 dark:text-white">
+                    <h1 class="text-3xl font-bold mb-4">{{ page.title }}</h1>
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部区域 -->
+        <div class="h-[25vh] bg-gray-900 text-white text-center p-4 dark:bg-gray-900">
+            <p>&copy; 2023 杨兴磊的个人主页. 保留所有权利。</p>
+        </div>
+    </div>
+
+    <!-- 暗黑模式切换脚本 -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        if (!themeToggle) {
+    console.error("未找到 theme-toggle 按钮");
+}
+        const html = document.documentElement;
+
+        // 初始化主题
+        if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i> 亮色模式';
+            
+        } else {
+            html.classList.remove('dark');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i> 暗黑模式';
+            
+        }
+
+        // 切换主题
+        themeToggle.addEventListener('click', () => {
+            
+            html.classList.toggle('dark');
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i> 亮色模式';
+                
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i> 暗黑模式';
+                
+            }
+        });
+    </script>
+</body>
+
+</html>
