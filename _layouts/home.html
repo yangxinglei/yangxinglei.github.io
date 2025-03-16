@@ -62,15 +62,11 @@
                             <i class="fas fa-donate"></i> 捐赠
                         </a>
                     </div>
-                    <!-- 切换按钮（右上角） -->
-                    <button id="theme-toggle" class="text-white hover:text-yellow-400">
-                        <i class="fas fa-moon"></i> 暗黑模式
-                    </button>
+                    
                 </nav>
 
                 <!-- 右侧内容 -->
                 <div class="p-8 text-gray-900 dark:text-white">
-                    <h1 class="text-3xl font-bold mb-4">{{ page.title }}</h1>
                     {{ content }}
                 </div>
             </div>
@@ -82,40 +78,7 @@
         </div>
     </div>
 
-    <!-- 暗黑模式切换脚本 -->
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        if (!themeToggle) {
-    console.error("未找到 theme-toggle 按钮");
-}
-        const html = document.documentElement;
-
-        // 初始化主题
-        if (localStorage.getItem('theme') === 'dark') {
-            html.classList.add('dark');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i> 亮色模式';
-            
-        } else {
-            html.classList.remove('dark');
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i> 暗黑模式';
-            
-        }
-
-        // 切换主题
-        themeToggle.addEventListener('click', () => {
-            
-            html.classList.toggle('dark');
-            if (html.classList.contains('dark')) {
-                localStorage.setItem('theme', 'dark');
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i> 亮色模式';
-                
-            } else {
-                localStorage.setItem('theme', 'light');
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i> 暗黑模式';
-                
-            }
-        });
-    </script>
+    
 </body>
 
 </html>
