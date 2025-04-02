@@ -8,7 +8,7 @@ title: 捐赠
 <div class="h-32"></div>
 
 <div style="display: flex; gap: 100px;">
-    <img src="{{ '/assets/images/alipay.png' | relative_url }}" alt="支付宝捐助二维码" width="300" height="500">
-    <img src="{{ '/assets/images/wechat.png' | relative_url }}" alt="微信支付捐助二维码" width="300" height="500">
+    <img src="{{ '/assets/images/alipay.png' | relative_url }}" alt="支付宝捐助二维码" width="419" height="419">
+    <img src="{{ '/assets/images/wechat.png' | relative_url }}" alt="微信支付捐助二维码" width="419" height="387">
 </div>
 
